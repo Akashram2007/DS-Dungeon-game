@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Linked List Sort Chamber</title>
+  <link rel="stylesheet" href="linkedlist.css">
+</head>
+<body>
+
+<h1>Linked List Sort Chamber</h1>
+<div class="hint-box">
+  <p><b>🎯 Goal:</b> Arrange the nodes in <b>ascending order</b></p>
+  <p><b>🔗 Rules:</b></p>
+  <ul>
+    <li>Each node connects to <b>only one</b> next node</li>
+    <li>Values must increase from <b>HEAD → NULL</b></li>
+    <li>No cycles, no skipping nodes</li>
+    <li>Final node must point to <b>NULL</b></li>
+  </ul>
+</div>
+
+<div class="canvas" id="canvas">
+  
+  <svg id="arrows"></svg>
+  <div class="node head" data-id="HEAD">HEAD</div>
+
+  <div class="node" data-id="0"></div>
+  <div class="node" data-id="1"></div>
+  <div class="node" data-id="2"></div>
+  <div class="node" data-id="3"></div>
+
+  <div class="node null" data-id="NULL">NULL</div>
+
+  
+</div>
+
+<p id="msg"></p>
+
+<script src="linkedlist.js"></script>
+</body>
+</html>
