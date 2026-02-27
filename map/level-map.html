@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dungeon Map</title>
+  <link rel="stylesheet" href="map.css">
+</head>
+<body>
+
+  <div class="bg">
+  
+    <div class="stack">
+      <div></div><div></div><div></div><div></div>
+    </div>
+
+    <div class="queue">
+      <span></span><span></span><span></span><span></span>
+    </div>
+
+    <div class="tree">
+      <div class="node root">50</div>
+      <div class="children">
+        <div class="node">30</div>
+        <div class="node">70</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="map">
+
+    <div class="level unlocked l1" data-level="1">
+      <span class="num">1</span>
+      <span class="name">Stack</span>
+    </div>
+
+    <div class="level locked l2" data-level="2">
+      <span class="num">2</span>
+      <span class="name">Queue</span>
+    </div>
+
+    <div class="level locked l3" data-level="3">
+      <span class="num">3</span>
+      <span class="name">Linked List</span>
+    </div>
+
+    <div class="level locked l4" data-level="4">
+      <span class="num">4</span>
+      <span class="name">Tree</span>
+    </div>
+
+    <div class="level boss locked l5" data-level="5">
+      <span class="num">5</span>
+      <span class="name">Graph</span>
+    </div>
+
+  </div>
+
+  <script src="map.js"></script>
+</body>
+</html>

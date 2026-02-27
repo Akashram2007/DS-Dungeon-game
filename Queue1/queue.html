@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Queue Transfer Chamber</title>
+  <link rel="stylesheet" href="queue.css">
+</head>
+<body>
+
+<h1>Queue Transfer Chamber</h1>
+<div class="hint-box">
+  <p><b>🎯 Goal:</b> Arrange numbers in ascending order in <b>Queue 3</b></p>
+  <p><b>📏 Rules:</b></p>
+  <ul>
+    <li>Drag ONLY from the <b>FRONT</b></li>
+    <li>Drop ONLY at the <b>REAR</b></li>
+    <li>Use <b>Queue 2</b> as helper</li>
+    <li>FIFO matters!</li>
+  </ul>
+</div>
+
+<div class="queues">
+
+  <div class="queue-box">
+    <h3>Queue 1</h3>
+    <div class="queue" data-id="0"></div>
+  </div>
+
+  <div class="queue-box">
+    <h3>Queue 2</h3>
+    <div class="queue" data-id="1"></div>
+  </div>
+
+  <div class="queue-box">
+    <h3>Queue 3 (TARGET)</h3>
+    <div class="queue" data-id="2"></div>
+  </div>
+
+</div>
+
+<p id="msg"></p>
+
+<script src="queue.js"></script>
+</body>
+</html>

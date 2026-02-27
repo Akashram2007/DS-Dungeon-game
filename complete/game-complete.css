@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: radial-gradient(circle at top, #0f2027, #000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+  color: #eaffff;
+}
+
+.container {
+  text-align: center;
+  border: 2px solid #00ff88;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 0 30px #00ff88;
+}
+
+h1 {
+  color: #00ff88;
+  margin-bottom: 10px;
+}
+
+.levels {
+  display: flex;
+  flex-direction: column;   
+  align-items: center;      
+  gap: 16px;                
+  margin-top: 40px;
+}
+
+.level {
+  width: 120px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.level.unlocked {
+  background: #09e2f1;
+  color: #000;
+}
+
+.level.locked {
+  background: #333;
+  color: #777;
+  cursor: not-allowed;
+}
+
+.level.boss {
+  border: 2px solid red;
+  box-shadow: 0 0 10px red;
+}
+.buttons {
+  margin-top: 20px;
+}
+
+button {
+  background: #00ff88;
+  border: none;
+  padding: 12px 20px;
+  margin: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #00cc6a;
+}
+
+.stack {
+  position: absolute;
+  left: 20vw;
+  bottom: 20vw;
+}
+
+.stack div {
+  width: 55px;
+  height: 26px;
+  margin-bottom: 8px;
+  border: 2px solid #00ffcc;
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+.stack div:nth-child(2) { animation-duration: 7s; }
+.stack div:nth-child(3) { animation-duration: 5s; }
+.stack div:nth-child(4) { animation-duration: 8s; }
+
+.queue {
+  position: absolute;
+  right: 10vw;
+  top: 60%;
+  display: flex;
+  gap: 14px;
+}
+
+.queue span {
+  opacity: .8;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #ffcc00;
+  animation: floatFast 4s ease-in-out infinite;
+}
+
+.queue span:nth-child(2) { animation-duration: 6s; }
+.queue span:nth-child(3) { animation-duration: 5s; }
+.queue span:nth-child(4) { animation-duration: 7s; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatSlow {
+  0%   { transform: translate(0, 0); }
+  50%  { transform: translate(-10px, -22px); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes floatFast {
+  0%   { transform: translate(0, 0); }
+  50%  { transform: translate(12px, -28px); }
+  100% { transform: translate(0, 0); }
+}
